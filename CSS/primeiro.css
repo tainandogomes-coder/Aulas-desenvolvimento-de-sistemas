@@ -1,0 +1,14 @@
+        p{
+            color: red;
+            text-align: center;
+        }
+        #corVioleta{
+            color: violet;
+        }
+        .corVerde{
+            color: green;
+        }
+
+        .textoFim{
+            text-align: end;
+        }
