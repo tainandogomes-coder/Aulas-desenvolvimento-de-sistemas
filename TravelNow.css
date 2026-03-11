@@ -1,7 +1,6 @@
 .titulo{
     text-align: center;
     align-self: auto;
-    margin-right: 90%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -24,7 +23,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .imagem{
-    margin-top: 20%;
-    margin-right: 10%;
-    max-width: 100%;
+margin-top: 20%;
+max-width: 100%;
 }
+
