@@ -4,6 +4,13 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.Botão{
+    background-color: blue;
+    color: white;
+    width: 15vh;
+    height: 5vh;
+}
+
 #primeiro{
 align-self:flex-end;
 margin-left: 3%;
@@ -23,7 +30,15 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .imagem{
-margin-top: 20%;
+margin-left: 35vw;
 max-width: 100%;
+}
+
+.tituloSecundario{
+justify-self: center;
+}
+
+.Download{
+    justify-self: center;
 }
 
