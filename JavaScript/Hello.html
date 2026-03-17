@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="hello">Hello moon</h1>
+    <button onclick="hello()">Botão do tchau</button>
+
+    <script>
+        let hellos = document.querySelector("#hello");
+
+        function hello(){
+        if(hellos.innerHTML === "Hello moon"){
+           hellos.innerHTML ="Goodbye";
+        }else{
+            hellos.innerHTML = "Hello moon";
+        }
+        }
+    </script>
+</body>
+</html>
