@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrado</title>
+</head>
+<body>
+
+    <div id = "cadradro" style="width:100px; height:100px; background-color: black;"></div>
+    <button data-color ="Red" onclick="Red()">Rosso</button>
+    <button data-color ="Blue" onclick="Blue()">Blu</button>
+    
+
+    <script>
+        let cubo = document.getElementById("cadradro");
+        document.querySelectorAll("button").forEach((button) => {
+        console.log(button);
+        button.onclick = () => {
+            cubo.style.backgroundColor = button.dataset.color;
+        }           
+        });
+    </script>
+</body>
+</html>

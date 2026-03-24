@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truco</title>
+</head>
+<body >
+    <h1>Nós</h1>
+    <h2>0</h2>
+    <button id="Tento1">tento</button>
+    <button id="Truco1">truco</button>
+    <h1>Eles</h1>
+    <h2 id="1">0</h2>
+    <button id="Tento2">tento</button>
+    <button id="Truco2">truco</button>
+    
+    <button id="Reset">reiniciar partida</button>
+
+    <script>
+        let contador = 0;
+        function Tento1(){
+            contador ++;
+           document.querySelector("h2").innerHTML = contador;
+        }
+        document.getElementById("Tento1").onclick = Tento1;
+
+        let contador2 = 0;
+        function Truco1(){
+            contador += 3;
+           document.getElementById("h2").innerHTML = contador;
+        }
+        document.getElementById("Truco1").onclick = Truco1;
+
+        let contador3 = 0;
+        function Tento2(){
+            contador2 ++;
+           document.getElementById("1").innerHTML = contador2;
+        }
+        document.getElementById("Tento2").onclick = Tento2;
+
+        let contador4 = 0;
+        function Truco2(){
+            contador2 += 3;
+           document.getElementById("1").innerHTML = contador2;
+        }
+        document.getElementById("Truco2").onclick = Truco2;
+        
+        let contador5 = 0;
+        function Reset(){
+            contador = contador-contador;
+            contador = contador2-contador2;
+
+            document.querySelector("h2").innerHTML = contador;
+           document.getElementById("1").innerHTML = contador;
+        }
+        
+        document.getElementById("Reset").onclick = Reset;
+
+    </script>
+    
+</body>
+</html>

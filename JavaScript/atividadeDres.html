@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloquinho</title>
+</head>
+<body>
+    
+    <div id = "manyman" style="width:100px; height:100px; color: grey;">Dam Bro</div>
+    <button  data-color ="white" onclick="white()">bianco</button>
+    <button  data-color ="black" onclick="black()">nero</button>
+
+    <script>
+        let invisivel = document.getElementById("manyman");
+        document.querySelectorAll("button").forEach((button) => {
+        console.log(button);
+        button.onclick = () => {
+            invisivel.style.backgroundColor = button.dataset.color;
+        }           
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade1</title>
+</head>
+<body>
+    <h1 id="conteudo1">Conteudo 1</h1>
+    <button onclick="Conteudo()">Mudar Conteudo</button>
+
+    <script>
+        let conteudos = document.querySelector("#conteudo1");
+
+        function Conteudo(){
+            if(conteudos.innerHTML === "Conteudo 1"){
+                conteudos.innerHTML = "Conteudo 2";
+            }else{
+                conteudos.innerHTML = "Conteudo 1"
+            }
+        }
+    </script>
+    
+</body>
+</html>
