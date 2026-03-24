@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,7 @@
     <button id="Truco2">truco</button>
     
     <button id="Reset">reiniciar partida</button>
+      
 
     <script>
         let contador = 0;
@@ -49,11 +50,18 @@
         let contador5 = 0;
         function Reset(){
             contador = contador-contador;
-            contador = contador2-contador2;
+            contador2 = contador2-contador2;
 
             document.querySelector("h2").innerHTML = contador;
-           document.getElementById("1").innerHTML = contador;
+           document.getElementById("1").innerHTML = contador2;
         }
+
+        if(contador =+ 12){
+            
+            contador = contador-contador;
+            contador2 = contador2-contador2;
+        }
+    
         
         document.getElementById("Reset").onclick = Reset;
 
