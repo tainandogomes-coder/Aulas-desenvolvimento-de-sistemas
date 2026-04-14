@@ -49,11 +49,20 @@ app.put("/usuario/:id", (req,res)=>{
 
     novoUsuario.id = id;
 
-    const index = usuarios.findIndex(e => e.id == id);
+    const index = usuarios.findIndex(e => e.id === id);
 
     usuarios[index] = novoUsuario;
 
     res.status(204).send("Usuario Atualizado")
+})
+
+app.delete("/usuario/:id", (req, res) =>{
+    const id = parseInt(req.params.id)
+
+    const index = usuarios.findIndex(e =>e.id === id);
+    usuarios.splice(index, 1)
+
+    res.status(204).send("Usuario deletado com Sucesso!")
 })
 
 app.listen(port, ()=>{
