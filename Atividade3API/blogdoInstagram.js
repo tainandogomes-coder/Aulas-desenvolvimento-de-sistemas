@@ -6,8 +6,8 @@ const port = 3002
 app.use(express.json())
 
 const posts = [
-    { id: 1, titulo: "Primeiro post", conteudo: "conteudo do primeiro post", autor:"Carlos" },
-    { id: 2, titulo: "Segundo post", conteudo: "Olá mundo", autor:"Ana"}
+    { id: 1, titulo: "Primeiro post", conteudo: "conteudo do primeiro post", autor:"carlos" },
+    { id: 2, titulo: "Segundo post", conteudo: "Olá mundo", autor:"ana"}
 ]
 
 let NovoPost = 3;
@@ -32,27 +32,26 @@ app.post("/post", (req, res) => {
     let post = req.body;
     post.id = NovoPost
 
-    post.push(post)
+    posts.push(post)
     NovoPost++
 
     res.status(201).send("Post adicionada com sucesso")
 })
 
-app.patch("/tarefa/:id", (req, res) => {
+app.patch("/post/:id", (req, res) => {
     const id = parseInt(req.params.id)
-    const atualizaçãodePost = req.body
+    const atualizaçãodePost = req.body.conteudo
 
     const index = posts.findIndex(e => e.id === id)
 
     if (index === -1) {
         return res.status(404).send("Post não encontrada")
     }
-    if(index ){
+    if(!atualizaçãodePost){
         return res.status(400).send("Post não atualizado")
     }
 
-    atualizaçãodePost.id = id
-    posts[index] = atualizaçãodePost
+    posts[index].conteudo = atualizaçãodePost
 
     res.status(200).send("Tarefa atualizada com sucesso")
 })

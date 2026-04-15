@@ -28,15 +28,13 @@ app.get("/produtos/pesquisa/:id", (req, res)=>{
     res.send(produto)
 })
 
-app.patch("/produtos/:id", (req, res) =>{
+app.patch("/produtos/:nome", (req, res) =>{
     let atualizaçãoProduto = req.body;
     const id = parseInt(req.params.id)
 
-    atualizaçãoProduto.id = id;
-
     const index = produtos.findIndex(e => e.id === id);
 
-     produtos[index] = atualizaçãoProduto;
+     produtos[index].preco = atualizaçãoProduto;
 
     res.status(204).send("Produto Alterado")
 })
