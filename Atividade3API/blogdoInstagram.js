@@ -53,7 +53,7 @@ app.patch("/post/:id", (req, res) => {
 
     posts[index].conteudo = atualizaçãodePost
 
-    res.status(200).send("Tarefa atualizada com sucesso")
+    res.status(200).send("Post atualizada com sucesso")
 })
 
 
