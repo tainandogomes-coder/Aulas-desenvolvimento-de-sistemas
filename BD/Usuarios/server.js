@@ -18,4 +18,23 @@ app.get('/usuario', async (req, res) => {
     }
 })
 
+app.get('/usuario/:Id', async (req, res) => {
+  const id = parseInt(req.params.Id);
+
+
+    if(isNaN(id)){
+        res.status(400).send("o id é invàlido!")
+    }
+    try{
+        const [rows] = await db.query("Select * from usuario where id = ?", [id])
+        if(rows.length === 0){
+            return res.status(400).send("usuario não encontrado")
+        }
+    }catch(e){
+        console.log(e);
+        res.status(500).send("erro ao buscar tarefa!")        
+    }
+  
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
