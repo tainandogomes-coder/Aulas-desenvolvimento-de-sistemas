@@ -18,8 +18,8 @@ app.get('/usuario', async (req, res) => {
     }
 })
 
-app.get('/usuario/:Id', async (req, res) => {
-  const id = parseInt(req.params.Id);
+app.get('/usuario/:id', async (req, res) => {
+  const id = parseInt(req.params.id);
 
 
     if(isNaN(id)){
