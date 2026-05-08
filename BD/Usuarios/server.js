@@ -2,8 +2,10 @@ const express = require('express')
 const app = express()
 const port = 3002
 const db = require('./db')
+const cors = require('cors')
 
 app.use(express.json())
+app.use(cors())
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
@@ -13,7 +15,7 @@ app.get('/usuario', async (req, res) => {
         res.json(rows)
     }catch(e){
         console.log(e);
-        res.status(500).send("Erro ao buscar tarefa!")
+        res.status(500).send("Erro ao buscar usuario!")
         
     }
 })
