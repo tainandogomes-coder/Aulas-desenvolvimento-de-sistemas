@@ -14,10 +14,10 @@ fetch('http://localhost:3002/usuario')
         data.forEach(element => {
             console.log(element);
             listaUsuario.innerHTML += 
-            `<li class='list-group-item'>${element.nome} - ${element.idade}
+            `<li class='list-group-item'>
+            <h5>Nome:${element.nome} Idade: ${element.idade}</h5>
+            <a href="./EditarUsuario/index.html?id=${element.id}" class="btn btn-primary">Atualizar</a>
             </li>`
-            
         })
     })
-
     .catch(error => console.log(error));
