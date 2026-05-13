@@ -3,8 +3,8 @@ main {
 }
 
 li{
-    display: flex !important;
-    width: 30wh;
+    width: 40vw;
+    display: flex !important;    
     justify-content: space-between;
 }
 
@@ -12,4 +12,13 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    h1{
+        text-align: center;
+    }
+    
+}
+
+.cadastro{
+    width: 40vw;
+    margin: 2vh 0px;
 }

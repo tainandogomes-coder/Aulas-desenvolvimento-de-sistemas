@@ -24,25 +24,24 @@ fetch(`http://localhost:3002/usuario/${id}`)
 function atualizarUsuario(event) {
     event.preventDefault() //não recarrregar pagina
 
-    const nome = document.getElementById('nomeUsuario').value
-    const idade = document.getElementById('idadeUsuario').value
-
-    console.log(nome),
-    console.log(idade);
-    
     const usuario = {
-        "nome": nome,
-        "idade": parseInt(idade)
+        "nome": nome.value,
+        "idade": parseInt(idade.value)
     }   
 
-    fetch('http://localhost:3002/usuario', {
+    fetch(`http://localhost:3002/usuario/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(usuario)
     })
-        .then(response => response.json())
+        .then(response => {
+            if(response.ok){
+                return response
+            }
+            return response.json()
+        })
 
         .then(data => {
             alert("Usuario foi atualizado com sucesso!")
