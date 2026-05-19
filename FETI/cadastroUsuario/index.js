@@ -1,15 +1,12 @@
 function cadastrarUsuario(event) {
     event.preventDefault() //não recarrregar pagina
 
-    const nome = document.getElementById('nomeUsuario').value
-    const idade = document.getElementById('idadeUsuario').value
+    const titulo = document.getElementById('tituloTarefa').value
+    const descricao = document.getElementById('descricaoTarefa').value
 
-    console.log(nome),
-    console.log(idade);
-    
-    const usuario = {
-        "nome": nome,
-        "idade": parseInt(idade)
+    const tarefa = {
+        "titulo": titulo,
+        "descricao": descricao
     }   
 
     fetch('http://localhost:3002/tarefas', {

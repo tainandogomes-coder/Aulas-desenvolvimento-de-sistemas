@@ -15,15 +15,15 @@
 <body>
     <main class="centro">
         <div>
-        <h1>Atualizar  Usuarios</h1>
-        <form onsubmit="atualizarUsuario(event)">
+        <h1>Atualizar  Tarefa</h1>
+        <form onsubmit="atualizarTarefa(event)">
             <div class="mb-3">
-                <label for="nomeUsuario" class="form-label">Nome do Usuario</label>
-                <input type="text" class="form-control" id="nomeUsuario" required>
+                <label for="nomeTarefa" class="form-label">Nome da Tarefa</label>
+                <input type="text" class="form-control" id="nomeTarefa" required>
             </div>
             <div class="mb-3">
-                <label for="idadeUsuario" class="form-label">Idade</label>
-                <input type="number" class="form-control" id="idadeUsuario" min="0" max="150" required>
+                <label for="descricaoTarefa" class="form-label">Descrição da Tarefa</label>
+                <input type="number" class="form-control" id="descricaoTarefa" min="0" max="150" required>
             </div>
             <button type="submit" class="btn btn-primary">Atualizar</button>
         </form>

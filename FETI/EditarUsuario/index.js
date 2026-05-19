@@ -2,17 +2,17 @@ const searchParams = new URLSearchParams(window.location.search)
 const id = searchParams.get('id')
 console.log(id);
 
-const nome = document.getElementById('nomeUsuario')
-const idade = document.getElementById('idadeUsuario')
+const titulo = document.getElementById('tituloTareda')
+const descricao = document.getElementById('descricaoTarefa')
 
-fetch(`http://localhost:3002/usuario/${id}`)
+fetch(`http://localhost:3002/tarefa/${id}`)
 
     .then(response => response.json())
 
     .then(data => {
         console.log(data)
-        nome.value = data.nome
-        idade.value = data.idade
+        nome.value = data.titulo
+        idade.value = data.descricao
     })
 
 
@@ -21,20 +21,20 @@ fetch(`http://localhost:3002/usuario/${id}`)
     
 
 
-function atualizarUsuario(event) {
+function atualizarTarefa(event) {
     event.preventDefault() //não recarrregar pagina
 
-    const usuario = {
-        "nome": nome.value,
-        "idade": parseInt(idade.value)
+    const tarefa = {
+        "titulo": titulo.value,
+        "descricao": descricao.value
     }   
 
-    fetch(`http://localhost:3002/usuario/${id}`, {
+    fetch(`http://localhost:3002/tarefa/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(usuario)
+        body: JSON.stringify(tarefa)
     })
         .then(response => {
             if(response.ok){
@@ -44,7 +44,7 @@ function atualizarUsuario(event) {
         })
 
         .then(data => {
-            alert("Usuario foi atualizado com sucesso!")
+            alert("Tarefa foi atualizado com sucesso!")
             window.location.href = '../index.html'
 })
     

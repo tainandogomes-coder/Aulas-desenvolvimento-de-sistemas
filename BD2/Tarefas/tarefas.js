@@ -37,7 +37,7 @@ app.get('/tarefa/:id', async (req, res) => {
   
 })
 
-app.post('/tarerfa', async (req, res) => {
+app.post('/tarefa', async (req, res) => {
     let {titulo} = req.body;
 
     if (!titulo ){

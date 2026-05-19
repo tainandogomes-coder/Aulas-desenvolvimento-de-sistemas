@@ -2,22 +2,21 @@ fetch('http://localhost:3002/usuario')
 
     .then(response => {
         if(response.status == 404){
-            alert("Usuario não encontrado!")
+            alert("Tarefa não encontrado!")
         }
         return response.json()
     })
     .then(data => {
         console.log(data)
-        const litaUsuario = document.getElementById("listaUsuario")
-        console.log(litaUsuario);
-        listaUsuario.innerHTML = "<li class='list-group-item'>teste</li>"
+        const litaUsuario = document.getElementById("listaTarefa")
+        console.log(litaTarefa);
         data.forEach(element => {
             console.log(element);
-            listaUsuario.innerHTML += 
+            listaTarefa.innerHTML += 
         `<li class='list-group-item'>
-            <h5>Nome:${element.nome} Idade: ${element.idade}</h5>
+            <h5>titulo:${element.titulo} concluida: ${element.descricao}</h5>
             <div>
-                <button onclick="deletarUsuario(${element.id}, '${element.nome}')" type="button" class="btn btn-danger">Deletar</button>
+                <button onclick="deletarUsuario(${element.titulo}, '${element.descricao}')" type="button" class="btn btn-danger">Deletar</button>
                 <a href="./EditarUsuario/index.html?id=${element.id}" class="btn btn-primary">Atualizar</a>                
             </div>
         </li>
@@ -27,8 +26,8 @@ fetch('http://localhost:3002/usuario')
     })
     .catch(error => console.log(error));
 
-    function deletarUsuario(usuarioId, usuarioNome){
-        const confirmar = confirm(`Você deseja deletar este usuario mesmo? ${usuarioNome}`)
+    function deletarTarefa(tarefaIdId, tarefaTitulo){
+        const confirmar = confirm(`Você deseja deletar esta tarefa mesmo? ${tarefaTitulo}`)
         if (!confirmar) {
             return
         }
@@ -53,7 +52,7 @@ fetch('http://localhost:3002/usuario')
     })
         
             .then(data => {
-                alert("O usuario foi deletado com sucesso")
+                alert("A tarefa foi deletado com sucesso")
                 window.location.reload()
             })
         

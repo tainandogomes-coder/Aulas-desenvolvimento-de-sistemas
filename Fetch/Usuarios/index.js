@@ -9,8 +9,8 @@ fetch('http://localhost:3002/usuario')
     .then(data => {
         console.log(data)
         const litaUsuario = document.getElementById("listaUsuario")
-        console.log(litaUsuario);
-        listaUsuario.innerHTML = "<li class='list-group-item'>teste</li>"
+        console.log(listaUsuario);
+        // listaUsuario.innerHTML = "<li class='list-group-item'>teste</li>"
         data.forEach(element => {
             console.log(element);
             listaUsuario.innerHTML += 
