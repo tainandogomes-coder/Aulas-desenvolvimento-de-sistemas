@@ -1,0 +1,3 @@
+const permissoes = ["USER", "EDITOR", "SUPORTE", "MODERADOR", "CLIENTE", "VISITANTE", "DEV", "TESTER", "GERENTE", "FINANCEIRO", "RH", "ANALISTA", "OPERADOR", "COORDENADOR", "LIDER", "MARKETING", "COMERCIAL", "ESTAGIARIO", "CEO", "ADMIN"];
+
+console.log(permissoes.includes("ADMIN"));
