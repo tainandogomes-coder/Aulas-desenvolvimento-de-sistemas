@@ -22,6 +22,6 @@ const produtos = [ { nome: "Mouse", preco: 80 },
 const haddad = produtos.map(produtos => produtos.preco * 8)
 
 produtos.forEach(produtos=>
-    console.log(`O produto ${produtos.nome} custa ${produtos.preco}R$`)
+    console.log(`O produto ${produtos.nome} custa ${produtos.preco * 8}R$`)
     
 )
