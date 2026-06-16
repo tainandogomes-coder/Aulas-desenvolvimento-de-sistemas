@@ -22,7 +22,7 @@ formulario.addEventListener('submit', function(event) {
 
 let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
-let usuarioExiste = usuarios.find(e => e.email ===email);
+let usuarioExiste = usuarios.find(e => e.email === email);
 
 if(!usuarioExiste){
 usuarioExiste.push({
